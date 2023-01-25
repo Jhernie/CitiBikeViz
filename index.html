@@ -1,23 +1,13 @@
 <html>
   <head>
-    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
   </head>
   <body>
-    <div align="center">
-      <div id="tableauViz"></div>
-    </div>
-    <script>
-      var containerDiv = document.getElementById("tableauViz"),
-          url = "https://10az.online.tableau.com/t/jherniecloudviz/views/CitiBikeVizNYC/CitiDashboard";
-      
-    //   var options = {
-    //       hideTabs: true,
-    //       onFirstInteractive: function () {
-    //           console.log("Run this code when the viz has finished loading.");
-    //       }
-    //   };
-      
-      var viz = new tableau.Viz(containerDiv, url, options);
-    </script>
+    <tableau-viz id="tableauViz"       
+      src="https://10az.online.tableau.com/t/jherniecloudviz/views/CitiBikeVizNYC/CitiDashboard"      
+      height='600px' width='600px' toolbar='bottom' hide-tabs>
+    </tableau-viz>
+
   </body>
 </html>
+
